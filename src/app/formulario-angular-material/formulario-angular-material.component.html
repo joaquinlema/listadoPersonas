@@ -1,0 +1,38 @@
+<div class="example-container">
+  <h1>Sign Up</h1>
+  <p>Please fill in this form to create an account.</p>
+  <mat-form-field hintLabel="Max 10 characters">
+    <input
+    matInput
+    #nombreInput
+    maxlength="10"
+    placeholder="Ingrese Nombre">
+    <mat-hint align="end">{{nombreInput.value?.length || 0}}/10</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field hintLabel="Max 10 characters">
+      <input
+      matInput
+      #apellidoInput
+      maxlength="10"
+      placeholder="Ingrese Apellido">
+      <mat-hint align="end">{{apellidoInput.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Sexo" [(ngModel)]='_sexoSelect'>
+      <mat-option value="Masculino">Masculino</mat-option>
+      <mat-option value="Femenino">Femenino</mat-option>
+    </mat-select>
+    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+  </mat-form-field>
+
+    <div class="clearfix">
+      <button
+      mat-stroked-button
+      color="primary"
+      (click)="onAgregarPersona(nombreInput, apellidoInput)"
+      >Sign Up</button>
+
+    </div>
+</div>

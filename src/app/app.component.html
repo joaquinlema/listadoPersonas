@@ -1,0 +1,21 @@
+<!--<app-formulario></app-formulario>-->
+<div class='container'>
+<app-formulario-angular-material></app-formulario-angular-material>
+</div>
+
+<div class="container">
+    <h2>Listado de Personas</h2>
+      <app-persona
+      *ngFor="let personaElemento of _personas; let i = index"
+      [persona]="personaElemento"
+      [indice]="i"
+      (editar)='onLlamarEdicion($event)'
+      ></app-persona>
+</div>
+
+<app-formulario-edicion
+[hidden]="!mostrarEdicion"
+[persona]='persona'
+[indice]='indice'
+(cerraEdicion)='cerrarForm($event)'
+></app-formulario-edicion>
