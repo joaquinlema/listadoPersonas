@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div>
+        {{indice +1}} {{persona._nombre}} {{persona._apellido}}
+        <button
+          mat-icon-button
+          type='submit'
+          class='btn btn-primary'
+          (click)='onEditar()'>
+          <mat-icon svgIcon="editar" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          type='submit'
+          class='btn btn-primary'
+          (click)='onEliminar(indice)'>
+          <mat-icon svgIcon="delete" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

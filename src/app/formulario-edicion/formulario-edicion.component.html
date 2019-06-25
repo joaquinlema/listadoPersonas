@@ -1,0 +1,28 @@
+<div class="example-container">
+  <h2>Formulario de Edicion</h2>
+  <mat-form-field>
+    <input
+    matInput
+    [(ngModel)]='persona._nombre'
+    >
+  </mat-form-field>
+  <mat-form-field>
+    <input
+    matInput
+    [(ngModel)]='persona._apellido'
+    >
+  </mat-form-field>
+
+  <div class="example-button-row">
+
+    <button
+    mat-raised-button
+    (click)='onCambiar()'
+    >Guardar</button>
+
+    <button
+    mat-raised-button
+    (click)='onCancelar()'
+    >Cancelar</button>
+  </div>
+</div>
