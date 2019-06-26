@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .example-container {
   display: flex;
   flex-direction: column;
@@ -7,13 +6,3 @@
 .example-container > * {
   width: 100%;
 }
-=======
-.example-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.example-container > * {
-  width: 100%;
-}
->>>>>>> 640188f062269582063479223714d841a0c7db50
