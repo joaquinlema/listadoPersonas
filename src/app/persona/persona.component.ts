@@ -1,11 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Persona } from '../persona.model';
 import { PersonasService } from '../personas.service';
-<<<<<<< HEAD
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
-=======
->>>>>>> 640188f062269582063479223714d841a0c7db50
 
 @Component({
   selector: 'app-persona',
@@ -18,7 +15,6 @@ export class PersonaComponent implements OnInit {
   @Input() indice: string;
   @Output() editar = new EventEmitter();
 
-<<<<<<< HEAD
   constructor(private personaService: PersonasService,
     iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
       iconRegistry.addSvgIcon(
@@ -28,9 +24,6 @@ export class PersonaComponent implements OnInit {
         'delete',
         sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/delete.svg'));
     }
-=======
-  constructor(private personaService: PersonasService) { }
->>>>>>> 640188f062269582063479223714d841a0c7db50
 
   ngOnInit() {
   }
@@ -39,10 +32,7 @@ export class PersonaComponent implements OnInit {
     this.editar.emit({indice: this.indice, persona : this.persona});
   }
 
-<<<<<<< HEAD
   onEliminar(indice: number) {
     this.personaService.onEliminarPersona(indice);
   }
-=======
->>>>>>> 640188f062269582063479223714d841a0c7db50
 }
