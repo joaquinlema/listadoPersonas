@@ -3,7 +3,6 @@
 <app-formulario-angular-material></app-formulario-angular-material>
 </div>
 
-<<<<<<< HEAD
 <mat-grid-list cols="4" rowHeight="300px">
     <mat-grid-tile
       [colspan]='1'
@@ -34,21 +33,3 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-=======
-<div class="container">
-    <h2>Listado de Personas</h2>
-      <app-persona
-      *ngFor="let personaElemento of _personas; let i = index"
-      [persona]="personaElemento"
-      [indice]="i"
-      (editar)='onLlamarEdicion($event)'
-      ></app-persona>
-</div>
-
-<app-formulario-edicion
-[hidden]="!mostrarEdicion"
-[persona]='persona'
-[indice]='indice'
-(cerraEdicion)='cerrarForm($event)'
-></app-formulario-edicion>
->>>>>>> 640188f062269582063479223714d841a0c7db50
