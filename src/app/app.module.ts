@@ -17,7 +17,10 @@ import { MatToolbarModule,
 import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioEdicionComponent } from './formulario-edicion/formulario-edicion.component';
+<<<<<<< HEAD
 import { MatGridListModule } from '@angular/material/grid-list';
+=======
+>>>>>>> 640188f062269582063479223714d841a0c7db50
 
 @NgModule({
   declarations: [
@@ -40,8 +43,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
+<<<<<<< HEAD
     HttpClientModule,
     MatGridListModule
+=======
+    HttpClientModule
+>>>>>>> 640188f062269582063479223714d841a0c7db50
   ],
   providers: [LoggingService, PersonasService, DataService],
   bootstrap: [AppComponent]
