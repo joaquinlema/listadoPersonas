@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggingService } from '../LoggingService.service';
-import { PersonasService } from '../personas.service';
-import { Persona } from '../persona.model';
+import { LoggingService } from '../../LoggingService.service';
+import { PersonasService } from '../../personas.service';
+import { Persona } from '../../persona.model';
 
 @Component({
   selector: 'app-formulario-angular-material',

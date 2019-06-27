@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Persona } from '../persona.model';
-import { PersonasService } from '../personas.service';
+import { Persona } from '../../persona.model';
+import { PersonasService } from '../../personas.service';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 
