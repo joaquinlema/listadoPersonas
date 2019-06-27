@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularioEdicionComponent } from './formulario-edicion/formulario-edicion.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LoginComponent } from './login/login.component';
+import { PersonasComponent } from './personas/personas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     FormularioComponent,
     FormularioAngularMaterialComponent,
     FormularioEdicionComponent,
-    LoginComponent
+    LoginComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,
