@@ -32,7 +32,7 @@ export class PersonaComponent implements OnInit {
     this.editar.emit({indice: this.indice, persona : this.persona});
   }
 
-  onEliminar(indice: number) {
-    this.personaService.onEliminarPersona(indice);
+  onEliminar(indice: string) {
+    this.personaService.onEliminarPersona(Number(indice));
   }
 }
