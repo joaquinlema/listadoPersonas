@@ -18,6 +18,7 @@ import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioEdicionComponent } from './formulario-edicion/formulario-edicion.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     PersonaComponent,
     FormularioComponent,
     FormularioAngularMaterialComponent,
-    FormularioEdicionComponent
+    FormularioEdicionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
