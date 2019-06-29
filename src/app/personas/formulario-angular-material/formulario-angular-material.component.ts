@@ -36,7 +36,8 @@ onAgregarPersona(nombreInput: HTMLInputElement , apellidoInput: HTMLInputElement
       apellidoInput.value = '';
       // this._nombreInput = '';
       // this._apellidoInput = '';
-  } else {
+      this.onCancelar();
+    } else {
       this._loggingService.enviarMensajeConsola('Error', 'Debe completar todos los campos', 'Volver');
   }
 }
