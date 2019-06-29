@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona.model';
 import { PersonasService } from '../personas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personas',
@@ -15,7 +16,8 @@ export class PersonasComponent implements OnInit {
   persona: Persona;
   indice: number;
 
-  constructor(private personasService: PersonasService) {}
+  constructor(private personasService: PersonasService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.persona = new Persona('', '');
@@ -38,6 +40,10 @@ export class PersonasComponent implements OnInit {
 
   cerrarForm(cerrarFormulario: boolean) {
     this.mostrarEdicion = cerrarFormulario;
+  }
+
+  onAgregarPersona() {
+    this.router.navigate(['personas/agregar']);
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoggingService } from '../../LoggingService.service';
 import { PersonasService } from '../../personas.service';
 import { Persona } from '../../persona.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-angular-material',
@@ -13,7 +14,8 @@ export class FormularioAngularMaterialComponent implements OnInit {
   _sexoSelect: string;
 
   constructor(private _loggingService: LoggingService,
-    private _personaService: PersonasService) {
+    private _personaService: PersonasService,
+    private router: Router) {
       /*this._personaService._saludar.subscribe(
         (indice: number) => this._loggingService.enviarMensajeConsola('Indice', 'El indice es: ' + indice, 'Ok')
       );*/
@@ -41,6 +43,10 @@ onAgregarPersona(nombreInput: HTMLInputElement , apellidoInput: HTMLInputElement
 
 onValidarPersona(nombre: string, apellido: string) {
   return (nombre && apellido);
+}
+
+onCancelar() {
+  this.router.navigate(['']);
 }
 
 }
