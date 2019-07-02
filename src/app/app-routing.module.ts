@@ -8,7 +8,7 @@ const routes: Routes = [
   {path : 'personas', component: PersonasComponent},
   {path : 'personas/agregar', component: FormularioAngularMaterialComponent},
   {path : 'personas/:id', component: FormularioAngularMaterialComponent},
-]
+];
 @NgModule({
   imports: [
     RouterModule.forRoot(
