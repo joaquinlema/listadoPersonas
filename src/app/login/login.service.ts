@@ -30,7 +30,7 @@ export class LoginService {
     }
 
     isAutenticado() {
-      return (!this.token);
+      return this.token != null;
     }
 
     onLogout() {
