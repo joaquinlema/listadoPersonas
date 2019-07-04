@@ -10,7 +10,7 @@ export class DataService {
 
   onGuardarPersonas( personas: Persona[]) {
     const token = this.loginService.getIdToken();
-    this.httpClient.put('https://app-listado-personas-64fad.firebaseio.com/datos.json', personas).subscribe(
+    this.httpClient.put('https://app-listado-personas-64fad.firebaseio.com/datos.json?auth=' + token, personas).subscribe(
       response => { console.log('resultado de guardar personas' + response); },
       error => { console.log('error' + error); }
     );
@@ -23,7 +23,7 @@ export class DataService {
 
   onModificarPersona(indice: number, persona: Persona) {
     const token = this.loginService.getIdToken();
-    const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json';
+    const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json?auth=' + token;
     this.httpClient.put(url, persona).subscribe(
       response => { console.log('resultado de modificar personas' + response); },
       error => { console.log('error' + error); }
@@ -32,7 +32,7 @@ export class DataService {
 
   onEliminarPersona(indice: number) {
     const token = this.loginService.getIdToken();
-    const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json';
+    const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json?auth=' + token;
     this.httpClient.delete(url).subscribe(
       response => { console.log('resultado de eliminar personas' + response); },
       error => { console.log('error' + error); }
