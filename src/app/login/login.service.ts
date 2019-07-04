@@ -32,4 +32,15 @@ export class LoginService {
     isAutenticado() {
       return (!this.token);
     }
+
+    onLogout() {
+      firebase.auth().signOut()
+      .then( () => {
+        this.token = null;
+        this.router.navigate(['login']);
+      })
+      .catch( error => {
+        console.log(error);
+      });
+    }
 }
