@@ -9,6 +9,7 @@ export class DataService {
     private loginService: LoginService) {}
 
   onGuardarPersonas( personas: Persona[]) {
+    const token = this.loginService.getIdToken();
     this.httpClient.put('https://app-listado-personas-64fad.firebaseio.com/datos.json', personas).subscribe(
       response => { console.log('resultado de guardar personas' + response); },
       error => { console.log('error' + error); }
@@ -21,6 +22,7 @@ export class DataService {
   }
 
   onModificarPersona(indice: number, persona: Persona) {
+    const token = this.loginService.getIdToken();
     const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json';
     this.httpClient.put(url, persona).subscribe(
       response => { console.log('resultado de modificar personas' + response); },
@@ -29,6 +31,7 @@ export class DataService {
   }
 
   onEliminarPersona(indice: number) {
+    const token = this.loginService.getIdToken();
     const url: string = 'https://app-listado-personas-64fad.firebaseio.com/datos/' + indice + '.json';
     this.httpClient.delete(url).subscribe(
       response => { console.log('resultado de eliminar personas' + response); },
