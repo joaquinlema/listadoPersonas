@@ -9,12 +9,12 @@
 <router-outlet></router-outlet>
 
 
-  <mat-grid-list cols="4" rowHeight="300px">
+  <mat-grid-list cols="4" rowHeight="500px">
       <mat-grid-tile
         [colspan]='1'
         [rowspan]='1'
         >
-        <div class='container fondoListado'>
+        <div class='container'>
           <h2>Listado de Personas</h2>
           <app-persona
           *ngFor="let personaElemento of _personas; let i = index"
