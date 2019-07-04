@@ -47,7 +47,7 @@ onValidarPersona(nombre: string, apellido: string) {
 }
 
 onCancelar() {
-  this.router.navigate(['']);
+  this.router.navigate(['personas']);
 }
 
 }
