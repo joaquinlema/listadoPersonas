@@ -6,12 +6,12 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
+  {path: 'login', component: LoginComponent},
   {path : '', component: PersonasComponent},
   {path : 'personas', component: PersonasComponent, children : [
     {path : 'agregar', component: FormularioAngularMaterialComponent},
     {path : ':id', component: FormularioAngularMaterialComponent},
   ]},
-  {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent}
 ];
 

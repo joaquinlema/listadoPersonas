@@ -1,11 +1,12 @@
-<div class='box'>
+<div class='container form-group'>
   <form class='item' #f='ngForm' (ngSubmit)='f.form.valid && onLogin(f)'>
-      <div>
-        <input type='email' name='email' placeholder="Email" ngModel required size='20'>
+      <div class='list-group-item'>
+        <input class="form-control" type='email' name='email' placeholder="Email" ngModel required size='20'>
       </div>
-      <div>
-        <input type='password' name='password' placeholder="Password" ngModel required size='20'>
+      <div class='list-group-item'>
+        <input class="form-control" type='password' name='password' placeholder="Password" ngModel required size='20'>
       </div>
-      <button type='submit' style='cursor:pointer'></button>
+
+      <button class="btn btn-primary" type='submit' style='cursor:pointer'>Ingresar</button>
   </form>
 </div>
