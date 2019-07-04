@@ -18,11 +18,11 @@ export class LoginService {
             then(
               token => {
                 this.token = token;
+                this.router.navigate(['/']);
               }
-            )
+            );
           }
         );
-        this.router.navigate(['/']);
     }
 
     getIdToken() {
