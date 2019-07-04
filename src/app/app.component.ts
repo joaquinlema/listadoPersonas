@@ -18,11 +18,11 @@ export class AppComponent implements OnInit {
   }
 
   isAutenticado() {
-
+    return  this.loginService.isAutenticado();
   }
 
   onSalir() {
-
+    this.loginService.onLogout();
   }
 
 }
