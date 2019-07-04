@@ -3,11 +3,11 @@
   mat-stroked-button
   color="primary"
   (click) = 'onAgregarPersona()'
-  >Agregar Nueva Persona</button>  
+  >Agregar Nueva Persona</button>
 </div>
-<div class='container' style="display: none">
-  <app-formulario-angular-material></app-formulario-angular-material>
-  </div>
+
+<router-outlet></router-outlet>
+
 
   <mat-grid-list cols="4" rowHeight="300px">
       <mat-grid-tile

@@ -7,8 +7,8 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {path : '', component: PersonasComponent},
   {path : 'personas', component: PersonasComponent, children : [
-    {path : 'personas/agregar', component: FormularioAngularMaterialComponent},
-    {path : 'personas/:id', component: FormularioAngularMaterialComponent},
+    {path : 'agregar', component: FormularioAngularMaterialComponent},
+    {path : ':id', component: FormularioAngularMaterialComponent},
   ]},
   {path: 'login', component: LoginComponent}
 ];
