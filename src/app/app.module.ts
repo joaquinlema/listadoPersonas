@@ -21,6 +21,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonasComponent } from './personas/personas.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PersonasComponent } from './personas/personas.component';
     FormularioAngularMaterialComponent,
     FormularioEdicionComponent,
     LoginComponent,
-    PersonasComponent
+    PersonasComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
