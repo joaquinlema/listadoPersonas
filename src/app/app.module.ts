@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PersonasComponent } from './personas/personas.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginService } from './login/login.service';
+import { LoginGuardian } from './login/login-guardian.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { LoginService } from './login/login.service';
     MatGridListModule,
     AppRoutingModule
   ],
-  providers: [LoggingService, PersonasService, DataService, LoginService],
+  providers: [LoggingService, PersonasService, DataService, LoginService, LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
