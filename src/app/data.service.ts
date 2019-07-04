@@ -17,7 +17,7 @@ export class DataService {
 
   onGetPersonas() {
     const token = this.loginService.getIdToken();
-    return this.httpClient.get('https://app-listado-personas-64fad.firebaseio.com/datos.json?auth' + token);
+    return this.httpClient.get('https://app-listado-personas-64fad.firebaseio.com/datos.json?auth=' + token);
   }
 
   onModificarPersona(indice: number, persona: Persona) {
