@@ -1,4 +1,15 @@
 <!--<app-formulario></app-formulario>
 <app-personas></app-personas>-->
+
+<div class='container'>
+  <button class='btn btn-primary'>
+    <a [routerLink]="['login']" routerLinkActive="router-link-active" >Log in</a>
+  </button>
+
+  <button class='btn btn-primary'
+  (click)='onSalir()'>
+    Log Out</button>
+
+</div>
 <router-outlet></router-outlet>
 
